@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <assert.h>
 
-double c2f(double cel){
-  return cel*1.8 + 32;
+double f2c(double fah){
+  return (fah-32)/1.8;
 }
 
 #ifdef MAIN
 int main(int argc, char **argv){
   double cel, fah;
 
-  cel = 0; fah = c2f(cel);
-  assert(fah == 32);
+  fah = 32; cel = f2c(fah);
+  assert(cel == 0);
 
-  cel = 100; fah = c2f(cel);
-  assert(fah == 212);
+  fah = 212; cel = f2c(fah);
+  assert(cel == 100);
 
   return 0;
 }
