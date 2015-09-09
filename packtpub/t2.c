@@ -74,6 +74,5 @@ int main(int argc, char **argv){
   fclose(fo);
   fclose(fw);
 
-
   return 0;
 }
