@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -vx
+
+LOG=/tmp/count
+D=`date`
+C=`who | cut -f1 -d' ' | wc -l`
+echo "$D $C" >> $LOG
